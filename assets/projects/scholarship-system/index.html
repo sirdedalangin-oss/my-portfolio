@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scholarship Management System | Screenshots - Edris Dalangin</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0f1117;
+    --bg-alt: #161925;
+    --text: #f1f2f6;
+    --text-light: #a3a8bd;
+    --primary: #818cf8;
+    --accent: #c4b5fd;
+    --border: #2a2e40;
+    --card-bg: #1a1d2b;
+    --radius: 14px;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  header {
+    text-align: center;
+    padding: 50px 24px 30px;
+    border-bottom: 1px solid var(--border);
+  }
+  header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    margin-bottom: 10px;
+  }
+  header p {
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto 20px;
+  }
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  .back-link:hover { color: var(--accent); }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 22px;
+  }
+  .gallery-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .gallery-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  }
+  .gallery-item img {
+    width: 100%;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid var(--border);
+  }
+  .gallery-item .label {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text);
+  }
+  /* Lightbox */
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.92);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+  }
+  .lightbox.active { display: flex; }
+  .lightbox img {
+    max-width: 92%;
+    max-height: 80%;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+  .lightbox .caption {
+    color: var(--text-light);
+    font-size: 0.95rem;
+  }
+  .lightbox-close {
+    position: absolute;
+    top: 24px;
+    right: 36px;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Scholarship Management System</h1>
+  <p>
+    UI/UX prototype designed for managing scholar records, academic information,
+    benefactors, renewals, messaging, and reports. Click any screen below to preview,
+    or open the full interactive prototype.
+  </p>
+  <p style="margin-bottom:20px;">
+    <a href="index.html" target="_blank" rel="noopener" class="back-link">
+      <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Full Interactive Prototype
+    </a>
+  </p>
+  <a href="../../../index.html#projects" class="back-link">
+    <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+  </a>
+</header>
+
+<div class="container">
+  <div class="gallery-grid">
+    <div class="gallery-item" data-img="pages/splashscreen.png" data-label="Splash Screen">
+      <img src="pages/splashscreen.png" alt="Splash Screen" loading="lazy">
+      <div class="label">Splash Screen</div>
+    </div>
+    <div class="gallery-item" data-img="pages/log_in_form.png" data-label="Log In Form">
+      <img src="pages/log_in_form.png" alt="Log In Form" loading="lazy">
+      <div class="label">Log In Form</div>
+    </div>
+    <div class="gallery-item" data-img="pages/dashboard.png" data-label="Dashboard">
+      <img src="pages/dashboard.png" alt="Dashboard" loading="lazy">
+      <div class="label">Dashboard</div>
+    </div>
+    <div class="gallery-item" data-img="pages/scholarship.png" data-label="Scholarship">
+      <img src="pages/scholarship.png" alt="Scholarship" loading="lazy">
+      <div class="label">Scholarship</div>
+    </div>
+    <div class="gallery-item" data-img="pages/academic_information.png" data-label="Academic Information">
+      <img src="pages/academic_information.png" alt="Academic Information" loading="lazy">
+      <div class="label">Academic Information</div>
+    </div>
+    <div class="gallery-item" data-img="pages/academic_information_add_filter.png" data-label="Academic Information - Add Filter">
+      <img src="pages/academic_information_add_filter.png" alt="Academic Information Add Filter" loading="lazy">
+      <div class="label">Academic Info — Add Filter</div>
+    </div>
+    <div class="gallery-item" data-img="pages/manage_scholarpersonal_background.png" data-label="Manage Scholar - Personal Background">
+      <img src="pages/manage_scholarpersonal_background.png" alt="Manage Scholar Personal Background" loading="lazy">
+      <div class="label">Manage Scholar — Personal Background</div>
+    </div>
+    <div class="gallery-item" data-img="pages/manage_scholaracademic_background_.png" data-label="Manage Scholar - Academic Background">
+      <img src="pages/manage_scholaracademic_background_.png" alt="Manage Scholar Academic Background" loading="lazy">
+      <div class="label">Manage Scholar — Academic Background</div>
+    </div>
+    <div class="gallery-item" data-img="pages/manage_scholarfamily_background_.png" data-label="Manage Scholar - Family Background">
+      <img src="pages/manage_scholarfamily_background_.png" alt="Manage Scholar Family Background" loading="lazy">
+      <div class="label">Manage Scholar — Family Background</div>
+    </div>
+    <div class="gallery-item" data-img="pages/family_background.png" data-label="Family Background">
+      <img src="pages/family_background.png" alt="Family Background" loading="lazy">
+      <div class="label">Family Background</div>
+    </div>
+    <div class="gallery-item" data-img="pages/benefactor.png" data-label="Benefactor">
+      <img src="pages/benefactor.png" alt="Benefactor" loading="lazy">
+      <div class="label">Benefactor</div>
+    </div>
+    <div class="gallery-item" data-img="pages/renewal.png" data-label="Renewal">
+      <img src="pages/renewal.png" alt="Renewal" loading="lazy">
+      <div class="label">Renewal</div>
+    </div>
+    <div class="gallery-item" data-img="pages/renewal_add_filter.png" data-label="Renewal - Add Filter">
+      <img src="pages/renewal_add_filter.png" alt="Renewal Add Filter" loading="lazy">
+      <div class="label">Renewal — Add Filter</div>
+    </div>
+    <div class="gallery-item" data-img="pages/calendar.png" data-label="Calendar">
+      <img src="pages/calendar.png" alt="Calendar" loading="lazy">
+      <div class="label">Calendar</div>
+    </div>
+    <div class="gallery-item" data-img="pages/calendar_add_event.png" data-label="Calendar - Add Event">
+      <img src="pages/calendar_add_event.png" alt="Calendar Add Event" loading="lazy">
+      <div class="label">Calendar — Add Event</div>
+    </div>
+    <div class="gallery-item" data-img="pages/messagecompose.png" data-label="Message - Compose">
+      <img src="pages/messagecompose.png" alt="Message Compose" loading="lazy">
+      <div class="label">Message — Compose</div>
+    </div>
+    <div class="gallery-item" data-img="pages/messageadd_recepient_.png" data-label="Message - Add Recipient">
+      <img src="pages/messageadd_recepient_.png" alt="Message Add Recipient" loading="lazy">
+      <div class="label">Message — Add Recipient</div>
+    </div>
+    <div class="gallery-item" data-img="pages/messagedraft_.png" data-label="Message - Draft">
+      <img src="pages/messagedraft_.png" alt="Message Draft" loading="lazy">
+      <div class="label">Message — Draft</div>
+    </div>
+    <div class="gallery-item" data-img="pages/messageoutbox_.png" data-label="Message - Outbox">
+      <img src="pages/messageoutbox_.png" alt="Message Outbox" loading="lazy">
+      <div class="label">Message — Outbox</div>
+    </div>
+    <div class="gallery-item" data-img="pages/my_profilemyaccount.png" data-label="My Profile - My Account">
+      <img src="pages/my_profilemyaccount.png" alt="My Profile My Account" loading="lazy">
+      <div class="label">My Profile — My Account</div>
+    </div>
+    <div class="gallery-item" data-img="pages/my_profileregister.png" data-label="My Profile - Register">
+      <img src="pages/my_profileregister.png" alt="My Profile Register" loading="lazy">
+      <div class="label">My Profile — Register</div>
+    </div>
+    <div class="gallery-item" data-img="pages/my_profileletter_.png" data-label="My Profile - Letter">
+      <img src="pages/my_profileletter_.png" alt="My Profile Letter" loading="lazy">
+      <div class="label">My Profile — Letter</div>
+    </div>
+    <div class="gallery-item" data-img="pages/my_profilenew_college_.png" data-label="My Profile - New College">
+      <img src="pages/my_profilenew_college_.png" alt="My Profile New College" loading="lazy">
+      <div class="label">My Profile — New College</div>
+    </div>
+    <div class="gallery-item" data-img="pages/my_profilenew_subject_.png" data-label="My Profile - New Subject">
+      <img src="pages/my_profilenew_subject_.png" alt="My Profile New Subject" loading="lazy">
+      <div class="label">My Profile — New Subject</div>
+    </div>
+    <div class="gallery-item" data-img="pages/reportsscholar.png" data-label="Reports - Scholar">
+      <img src="pages/reportsscholar.png" alt="Reports Scholar" loading="lazy">
+      <div class="label">Reports — Scholar</div>
+    </div>
+    <div class="gallery-item" data-img="pages/reportsbenefactor_.png" data-label="Reports - Benefactor">
+      <img src="pages/reportsbenefactor_.png" alt="Reports Benefactor" loading="lazy">
+      <div class="label">Reports — Benefactor</div>
+    </div>
+    <div class="gallery-item" data-img="pages/reportsaudit_.png" data-label="Reports - Audit">
+      <img src="pages/reportsaudit_.png" alt="Reports Audit" loading="lazy">
+      <div class="label">Reports — Audit</div>
+    </div>
+    <div class="gallery-item" data-img="pages/systempassword.png" data-label="System Password">
+      <img src="pages/systempassword.png" alt="System Password" loading="lazy">
+      <div class="label">System Password</div>
+    </div>
+    <div class="gallery-item" data-img="pages/log_out.png" data-label="Log Out">
+      <img src="pages/log_out.png" alt="Log Out" loading="lazy">
+      <div class="label">Log Out</div>
+    </div>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close" id="lightboxClose"><i class="fa-solid fa-xmark"></i></span>
+  <img src="" alt="Preview" id="lightboxImg">
+  <div class="caption" id="lightboxCaption"></div>
+</div>
+
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('click', () => {
+      lightboxImg.src = item.dataset.img;
+      lightboxCaption.textContent = item.dataset.label;
+      lightbox.classList.add('active');
+    });
+  });
+
+  lightboxClose.addEventListener('click', () => lightbox.classList.remove('active'));
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) lightbox.classList.remove('active');
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') lightbox.classList.remove('active');
+  });
+</script>
+
+</body>
+</html>
