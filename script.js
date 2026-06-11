@@ -206,7 +206,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 // =====================================================
-// CONTACT FORM (Demo - Formspree-ready)
+// CONTACT FORM (Formspree-powered)
 // =====================================================
 const contactForm = document.getElementById('contactForm');
 const formStatus = document.getElementById('formStatus');
@@ -214,18 +214,27 @@ const formStatus = document.getElementById('formStatus');
 contactForm.addEventListener('submit', function (e) {
   e.preventDefault();
 
-  // NOTE: To make this form functional on GitHub Pages,
-  // sign up at https://formspree.io, get your form endpoint,
-  // and set the form's "action" attribute + method="POST".
-  // Example:
-  // <form id="contactForm" action="https://formspree.io/f/yourFormID" method="POST">
+  const formData = new FormData(contactForm);
 
-  const name = document.getElementById('name').value;
-
-  formStatus.textContent = `Thanks, ${name}! Your message has been noted (connect a form service like Formspree to enable real email delivery).`;
+  formStatus.textContent = 'Sending...';
   formStatus.style.color = 'var(--primary)';
 
-  contactForm.reset();
+  fetch(contactForm.action, {
+    method: 'POST',
+    body: formData,
+    headers: { 'Accept': 'application/json' }
+  })
+    .then(response => {
+      if (response.ok) {
+        formStatus.textContent = 'Thanks! Your message has been sent successfully.';
+        contactForm.reset();
+      } else {
+        formStatus.textContent = 'Oops! Something went wrong. Please try again or email me directly.';
+      }
+    })
+    .catch(() => {
+      formStatus.textContent = 'Oops! Something went wrong. Please try again or email me directly.';
+    });
 
   setTimeout(() => {
     formStatus.textContent = '';
